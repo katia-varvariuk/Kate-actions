@@ -31,7 +31,7 @@ jobs:
         run: npm run build --if-present
 
       - name: Test
-        run: npx vitest run --reporter=verbose
+        run: npx vitest run --reporter=verbose --coverage.reporter=json-summary --coverage.reporter=text
 
       - name: Coverage Report
         uses: davelosert/vitest-coverage-report-action@v2
